@@ -123,4 +123,24 @@ public class Service {
         }
         return userReportList;
     }
+
+    public List<UserReport> getDataByParam(List<UserReport> reports, String gender) {
+        List<UserReport> reportList = new ArrayList<>();
+        for (UserReport report : reports) {
+            if (report.getGender().equals("male")) {
+                reportList.add(report);
+            }
+        }
+        return reportList;
+    }
+
+    public List<UserReport> getDataByMultipleParam(List<UserReport> reports, String gender, String status) {
+        List<UserReport> reportList = new ArrayList<>();
+        for (UserReport report : reports) {
+            if (report.getGender().equals("female") && report.getStatus().equals("current") || report.getStatus().equals("repaid")) {
+                reportList.add(report);
+            }
+        }
+        return reportList;
+    }
 }
