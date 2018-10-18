@@ -1,4 +1,4 @@
-package com.data;
+package com.data.domain;
 
 import java.time.LocalDate;
 import java.util.Objects;
